@@ -78,34 +78,40 @@ export default function NextPage() {
         {/* MAIN CONTENT  -- QUICK SEARCH */}
         <section className="flex flex-col flex-1 overflow-hidden">
           {/* SEARCH */}
-          <div>
-            {/* <label className="block text-sm md:text-base text-gray-500 font-medium">
-              Search Office
-            </label> */}
-            <div className="flex justify-center items-center border border-gray-200 py-1.5 rounded-md focus:outline-red-600 px-2 mb-2 shadow-sm">
-              {/* SVG */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-5 text-gray-500 font-semibold"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                />
-              </svg>
-
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search Office"
-                className="border-none outline-none w-full ps-2 text-gray-800 font-bold tracking-wide"
+          <div className="relative flex items-center border border-gray-200 py-1.5 rounded-md px-2 mb-2 shadow-sm">
+            {/* Search Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5 text-gray-500"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
               />
-            </div>
+            </svg>
+
+            {/* Input */}
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search Office"
+              className="w-full ps-2 pr-8 text-gray-800 font-medium placeholder:font-semibold outline-none"
+            />
+
+            {/* Clear Button */}
+            {query && (
+              <button
+                onClick={() => setQuery("")}
+                className="absolute right-2 text-gray-400 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            )}
           </div>
 
           {/* Table/card Content */}
@@ -143,8 +149,16 @@ export default function NextPage() {
                   ))}
                 </ul>
               ) : (
-                <div className="flex items-center justify-center h-full text-gray-400">
+                <div className="flex flex-col items-center justify-center  text-gray-400">
                   No data found
+                  {query && (
+                    <button
+                      onClick={() => setQuery("")}
+                      className="backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-gray-400 text-sm cursor-pointer"
+                    >
+                      Clear Search
+                    </button>
+                  )}
                 </div>
               )}
             </div>
