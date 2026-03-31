@@ -1,7 +1,17 @@
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import Search from "./utils/Search";
+import "./App.css";
 import App from "./App";
 
 export default function NextPage() {
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    setResults(Search(query));
+  }, [query])
+
   return (
     <>
       <section className="flex flex-col gap-4 m-4">
@@ -57,7 +67,7 @@ export default function NextPage() {
               Saang opisina mo gusto magtungo?
             </h1>
             <p className="text-xs md:text-sm">
-              (Which office do you want to transac?)
+              (Which office do you want to transact?)
             </p>
           </article>
         </div>
@@ -86,8 +96,8 @@ export default function NextPage() {
               </svg>
 
               <input
-                // value={search}
-                // onChange={(e) => setSearch(e.target.value)}
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search Office"
                 className="border-none outline-none w-full ps-2 text-gray-800 font-bold tracking-wide"
               />
@@ -95,9 +105,21 @@ export default function NextPage() {
           </div>
 
           <div className=" text-center flex-col items-center justify-center backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow h-full max-h-32 p-10">
-            <div colSpan="6" className="text-center text-gray-400">
-              No data found
-            </div>
+            { results.length > 0 ? (
+              <ul>
+                { results.map((res) => (
+                  <li key={res.name}>
+                    <span>{res.name} - {res.office}</span>
+                    <a href={res.link} download> Download </a>
+                    <a href={res.link} target="_blank"> View </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div colSpan="6" className="text-center text-gray-400">
+                No data found
+              </div>
+            )}
 
             <button className="backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-gray-400 text-sm cursor-pointer">
               Clear Search
