@@ -10,6 +10,7 @@ export default function NextPage() {
   const [results, setResults] = useState([]);
   const [pdfModalOpen, setPdfModalOpen] = useState(false);
   const [pdfToView, setPdfToView] = useState("");
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
     setResults(Search(query));
@@ -144,9 +145,17 @@ export default function NextPage() {
                           Download
                         </a>
                         <button
+                          //   onClick={() => {
+                          //     setPdfToView(res.link);
+                          //     setPdfModalOpen(true);
+                          //   }}
                           onClick={() => {
-                            setPdfToView(res.link);
-                            setPdfModalOpen(true);
+                            if (isMobile) {
+                              window.open(res.link, "_blank"); // open directly
+                            } else {
+                              setPdfToView(res.link);
+                              setPdfModalOpen(true);
+                            }
                           }}
                           className="text-sm text-blue-600 hover:underline"
                         >
