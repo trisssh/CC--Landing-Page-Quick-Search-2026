@@ -5,6 +5,7 @@ import "./App.css";
 import App from "./App";
 
 export default function NextPage() {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
@@ -28,7 +29,10 @@ export default function NextPage() {
 
           {/* Top-right button with tooltip */}
           <div className="absolute top-5 right-2 md:top-4 md:right-4 group">
-            <button className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer shadow-md">
+            <button
+              onClick={() => navigate("/")}
+              className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer shadow-md"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
