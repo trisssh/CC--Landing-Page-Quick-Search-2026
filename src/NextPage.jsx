@@ -14,7 +14,7 @@ export default function NextPage() {
 
   return (
     <>
-      <section className="flex flex-col gap-4 m-4 sm:bg-amber-300 md:bg-red-600 lg:bg-blue-700">
+      <section className="flex flex-col min-h-screen gap-4 p-4 overflow-hidden">
         <header className="relative bg-gradient-to-b from-[#009A68] to-emerald-500 text-white rounded-2xl p-1 shadow-md shadow-emerald-700">
           {/* Centered Title */}
           <article className="text-center">
@@ -76,7 +76,7 @@ export default function NextPage() {
         </section>
 
         {/* MAIN CONTENT  -- QUICK SEARCH */}
-        <section>
+        <section className="flex flex-col flex-1 overflow-hidden">
           {/* SEARCH */}
           <div>
             {/* <label className="block text-sm md:text-base text-gray-500 font-medium">
@@ -109,7 +109,7 @@ export default function NextPage() {
           </div>
 
           {/* Table/card Content */}
-          <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow max-h-80">
+          <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow flex-1 overflow-hidden">
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-4">
               {results.length > 0 ? (
