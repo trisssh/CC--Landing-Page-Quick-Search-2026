@@ -17,7 +17,7 @@ export default function NextPage() {
 
   return (
     <>
-      <section className="flex flex-col min-h-screen gap-4 p-4 overflow-hidden">
+      <section className="flex flex-col h-screen gap-4 p-4">
         <header className="relative bg-gradient-to-b from-[#009A68] to-emerald-500 text-white rounded-2xl p-1 shadow-md shadow-emerald-700">
           {/* Centered Title */}
           <article className="text-center">
