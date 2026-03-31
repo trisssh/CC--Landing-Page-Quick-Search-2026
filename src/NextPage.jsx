@@ -14,19 +14,21 @@ export default function NextPage() {
 
   return (
     <>
-      <section className="flex flex-col gap-4 m-4">
+      <section className="flex flex-col gap-4 m-4 sm:bg-amber-300 md:bg-red-600 lg:bg-blue-700">
         <header className="relative bg-gradient-to-b from-[#009A68] to-emerald-500 text-white rounded-2xl p-1 shadow-md shadow-emerald-700">
           {/* Centered Title */}
           <article className="text-center">
-            <h1 className="text-2xl md:text-3xl font-bold font-mono">
+            <h1 className="text-[21px] sm:text-2xl md:text-3xl font-bold font-mono">
               KARTA NG MAMAMAYAN
             </h1>
-            <p className="text-lg md:text-2xl">CITIZEN’S CHARTER</p>
+            <p className="text-base sm:text-lg md:text-2xl">
+              CITIZEN’S CHARTER
+            </p>
           </article>
 
           {/* Top-right button with tooltip */}
-          <div className="absolute top-4 right-4 group">
-            <button className="bg-[#005840] p-2 md:p-3 rounded-full cursor-pointer shadow-md">
+          <div className="absolute top-5 right-2 md:top-4 md:right-4 group">
+            <button className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -56,29 +58,31 @@ export default function NextPage() {
           </div>
         </header>
 
-        <div className="bg-[#F2F2F2] text-left items-center justify-start md:gap-2 text-gray-900 rounded-xl p-2 md:p-4 flex">
+        {/* Interactive Message */}
+        <section className="bg-gray-50 shadow-sm gap-1 text-left items-center justify-start md:gap-2 text-gray-900 rounded-xl p-2 md:p-4 flex">
           <img
             src="src/assets/logo-SPC-est.png"
-            className="size-15 md:size-18  drop-shadow-[3px_1px_0px_#2b2b2b]"
+            className="size-13 md:size-18  drop-shadow-[0_0_0.1rem_#009A68]"
           />
 
           <article>
-            <h1 className="text-sm md:text-base font-bold tracking-tight md:tracking-wide">
+            <h1 className="text-sm sm:text-base font-bold sm:tracking-wide">
               Saang opisina mo gusto magtungo?
             </h1>
-            <p className="text-xs md:text-sm">
+            <p className="text-xs md:text-sm tracking-tight sm:tracking-wide">
               (Which office do you want to transact?)
             </p>
           </article>
-        </div>
+        </section>
 
+        {/* MAIN CONTENT  -- QUICK SEARCH */}
         <section>
           {/* SEARCH */}
           <div>
             {/* <label className="block text-sm md:text-base text-gray-500 font-medium">
               Search Office
             </label> */}
-            <div className="flex justify-center items-center border border-gray-200 py-1.5 rounded-md focus:outline-red-600 px-2 mb-2">
+            <div className="flex justify-center items-center border border-gray-200 py-1.5 rounded-md focus:outline-red-600 px-2 mb-2 shadow-sm">
               {/* SVG */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,26 +108,46 @@ export default function NextPage() {
             </div>
           </div>
 
-          <div className=" text-center flex-col items-center justify-center backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow h-full max-h-32 p-10">
-            { results.length > 0 ? (
-              <ul>
-                { results.map((res) => (
-                  <li key={res.name}>
-                    <span>{res.name} - {res.office}</span>
-                    <a href={res.link} download> Download </a>
-                    <a href={res.link} target="_blank"> View </a>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <div colSpan="6" className="text-center text-gray-400">
-                No data found
-              </div>
-            )}
+          {/* Table/card Content */}
+          <div className="flex flex-col bg-white border border-gray-200 rounded-lg shadow max-h-80">
+            {/* Content */}
+            <div className="flex-1 overflow-y-auto p-4">
+              {results.length > 0 ? (
+                <ul className="space-y-3">
+                  {results.map((res) => (
+                    <li
+                      key={res.name}
+                      className="flex flex-col md:flex-row md:items-center md:justify-between bg-gray-50 rounded-md p-3 shadow-sm"
+                    >
+                      <span className="font-medium text-gray-800">
+                        {res.name} - {res.office}
+                      </span>
 
-            <button className="backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-gray-400 text-sm cursor-pointer">
-              Clear Search
-            </button>
+                      <div className="flex gap-3 mt-2 md:mt-0">
+                        <a
+                          href={res.link}
+                          download
+                          className="text-sm text-emerald-600 hover:underline"
+                        >
+                          Download
+                        </a>
+                        <a
+                          href={res.link}
+                          target="_blank"
+                          className="text-sm text-blue-600 hover:underline"
+                        >
+                          View
+                        </a>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div className="flex items-center justify-center h-full text-gray-400">
+                  No data found
+                </div>
+              )}
+            </div>
           </div>
         </section>
       </section>
