@@ -8,6 +8,8 @@ export default function NextPage() {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  const [pdfModalOpen, setPdfModalOpen] = useState(false);
+  const [pdfToView, setPdfToView] = useState("");
 
   useEffect(() => {
     setResults(Search(query));
@@ -141,13 +143,15 @@ export default function NextPage() {
                         >
                           Download
                         </a>
-                        <a
-                          href={res.link}
-                          target="_blank"
+                        <button
+                          onClick={() => {
+                            setPdfToView(res.link);
+                            setPdfModalOpen(true);
+                          }}
                           className="text-sm text-blue-600 hover:underline"
                         >
                           View
-                        </a>
+                        </button>
                       </div>
                     </li>
                   ))}
@@ -167,6 +171,37 @@ export default function NextPage() {
               )}
             </div>
           </div>
+
+          {/* VIEW - MODAL */}
+          {pdfModalOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+              {/* <div className="relative z-10 w-full max-w-2xl bg-white shadow-xl rounded-xl p-8 h-3/4 overflow-y-auto"> */}
+              <div className="relative z-10  bg-white w-11/12 md:w-3/4 lg:w-2/3 h-3/4 shadow-xl rounded-xl flex flex-col">
+                {/* Modal header */}
+                <div className="flex justify-between items-center p-4 ">
+                  <h2 className="text-lg font-semibold">PDF Viewer</h2>
+
+                  {/* Close button */}
+                  <button
+                    onClick={() => setPdfModalOpen(false)}
+                    // className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                {/* Modal body */}
+                <div className="flex-1 px-4 pb-4">
+                  <iframe
+                    src={pdfToView}
+                    className="w-full h-full"
+                    title="PDF Viewer"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
       </section>
     </>
