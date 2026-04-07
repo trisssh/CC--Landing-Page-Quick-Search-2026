@@ -1,18 +1,22 @@
 [
   {
     "name": "one.pdf",
-    "office": "one"
+    "office": "one",
+    "link": "/pdfs/one.pdf"
   },
   {
     "name": "two.pdf",
-    "office": "two"
+    "office": "two",
+    "link": "/pdfs/two.pdf"
   },
   {
     "name": "plsp.pdf",
-    "office": "Pamantasan ng Lungsod ng San Pablo (PSLP)"
+    "office": "Pamantasan ng Lungsod ng San Pablo (PLSP)",
+    "link": "/pdfs/plsp.pdf"
   },
   {
     "name": "test.pdf",
-    "office": "test"
+    "office": "test",
+    "link": "/pdfs/test.pdf"
   }
 ]
