@@ -35,10 +35,16 @@ export default function ViewPdf() {
     );
   }
 
-  console.log("PDF PATH:", file);
+  // console.log("PDF PATH:", file);
 
   return (
     <div className="h-screen overflow-y-auto bg-gray-100 p-4">
+      <article className="bg-gradient-to-b from-[#009A68] to-emerald-500 text-white text-center rounded-2xl mb-3">
+        <h1 className="text-[21px] sm:text-2xl md:text-3xl font-bold font-mono">
+          KARTA NG MAMAMAYAN
+        </h1>
+        <p className="text-base sm:text-lg md:text-2xl">CITIZEN’S CHARTER</p>
+      </article>
       <h1 className="text-center font-bold mb-4">PDF Viewer</h1>
 
       <Document
@@ -52,7 +58,6 @@ export default function ViewPdf() {
           );
         }}
       >
-
         {Array.from(new Array(numPages), (_, index) => (
           <div key={index} className="flex justify-center mb-4">
             <Page
@@ -68,7 +73,8 @@ export default function ViewPdf() {
       <div className="flex justify-center mt-4">
         <button
           onClick={() => navigate(-1)}
-          className="px-4 py-2 bg-emerald-600 text-white rounded shadow"
+          className="backdrop-blur-lg bg-emerald-500 hover:bg-emerald-600 text-white border border-emerald-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-sm cursor-pointer"
+          // className="px-4 py-2 bg-emerald-600 text-white rounded shadow"
         >
           Back
         </button>
