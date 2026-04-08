@@ -50,7 +50,7 @@ export default function ViewPdf() {
         <div className="absolute top-5 right-2 md:top-4 md:right-4 group">
           <button
             onClick={() => navigate(-1)}
-            className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer shadow-md text-white text-xs md:text-sm"
+            className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer text-white text-xs md:text-sm shadow-sm transition hover:shadow-md active:scale-95"
             // className="backdrop-blur-lg bg-emerald-500 hover:bg-emerald-600 text-white border border-emerald-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-sm cursor-pointer"
           >
             Back
@@ -86,7 +86,7 @@ export default function ViewPdf() {
       <div className="flex justify-center mt-4">
         <button
           onClick={() => navigate(-1)}
-          className="backdrop-blur-lg bg-emerald-500 hover:bg-emerald-600 text-white border border-emerald-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-sm cursor-pointer"
+          className="backdrop-blur-lg bg-emerald-500 shadow-sm transition hover:shadow-md active:scale-95 text-white border border-emerald-400 rounded-lg py-1 px-3 font-semibold tracking-wide text-sm cursor-pointer"
         >
           Back
         </button>

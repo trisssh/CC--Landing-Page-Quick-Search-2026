@@ -33,7 +33,7 @@ export default function NextPage() {
         <div className="absolute top-5 right-2 md:top-4 md:right-4 group">
           <button
             onClick={() => navigate("/")}
-            className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer shadow-md"
+            className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer shadow-sm transition hover:shadow-md active:scale-95"
           >
             Exit
           </button>
@@ -143,7 +143,7 @@ export default function NextPage() {
                 {query && (
                   <button
                     onClick={() => setQuery("")}
-                    className="backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-gray-400 text-sm cursor-pointer"
+                    className="backdrop-blur-lg bg-white border border-gray-200 rounded-lg shadow-sm transition hover:shadow-md active:scale-95 py-1 px-3 font-semibold tracking-wide text-gray-400 text-sm cursor-pointer"
                   >
                     Clear Search
                   </button>
