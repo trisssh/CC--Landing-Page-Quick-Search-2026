@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function App() {
   const navigate = useNavigate();
 
   return (
-    <section
+    <motion.section
       onClick={() => navigate("/next")}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -40 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
       className="min-h-screen bg-gradient-to-t from-[#009A68] to-emerald-500 text-white flex items-center justify-center px-2 cursor-pointer"
     >
       <div className="text-center">
@@ -22,7 +27,7 @@ function App() {
         </p>
         <p className="text-lg font-semibold">Click Anywhere</p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -51,7 +51,6 @@ export default function ViewPdf() {
           <button
             onClick={() => navigate(-1)}
             className="bg-[#005840] p-1 md:p-3 rounded-full cursor-pointer text-white text-xs md:text-sm shadow-sm transition hover:shadow-md active:scale-95"
-            // className="backdrop-blur-lg bg-emerald-500 hover:bg-emerald-600 text-white border border-emerald-200 rounded-lg shadow-md py-1 px-3 font-semibold tracking-wide text-sm cursor-pointer"
           >
             Back
           </button>
