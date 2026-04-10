@@ -1,8 +1,18 @@
 [
   {
-    "name": "one.pdf",
-    "office": "one",
-    "link": "/pdfs/one.pdf"
+    "name": "CACO.pdf",
+    "office": "City Accountant's Office (CACO)",
+    "link": "/pdfs/City Accountant's Office.pdf"
+  },
+  {
+    "name": "CACO.pdf",
+    "office": "City Accountant's Office (CACO)",
+    "link": "/pdfs/City Accountant's Office.pdf"
+  },
+  {
+    "name": "CADO.pdf",
+    "office": "City Administrator's Office (CADO)",
+    "link": "/pdfs/City Administrator's Office.pdf"
   },
   {
     "name": "two.pdf",
