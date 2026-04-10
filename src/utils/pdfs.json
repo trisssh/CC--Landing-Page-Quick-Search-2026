@@ -1,28 +1,18 @@
 [
   {
-    "name": "CACO.pdf",
-    "office": "City Accountant's Office (CACO)",
+    "name": "City Accountant's Office.pdf",
+    "office": "(CACO)",
     "link": "/pdfs/City Accountant's Office.pdf"
   },
   {
-    "name": "CACO.pdf",
-    "office": "City Accountant's Office (CACO)",
+    "name": "City Accountant's Office.pdf",
+    "office": "(CACO)",
     "link": "/pdfs/City Accountant's Office.pdf"
   },
   {
-    "name": "CADO.pdf",
-    "office": "City Administrator's Office (CADO)",
+    "name": "City Administrator's Office.pdf",
+    "office": "(CADO)",
     "link": "/pdfs/City Administrator's Office.pdf"
-  },
-  {
-    "name": "two.pdf",
-    "office": "two",
-    "link": "/pdfs/two.pdf"
-  },
-  {
-    "name": "plsp.pdf",
-    "office": "Pamantasan ng Lungsod ng San Pablo (PLSP)",
-    "link": "/pdfs/plsp.pdf"
   },
   {
     "name": "test.pdf",
