@@ -5,18 +5,218 @@
     "link": "/pdfs/City Accountant's Office.pdf"
   },
   {
-    "name": "City Accountant's Office.pdf",
-    "office": "(CACO)",
-    "link": "/pdfs/City Accountant's Office.pdf"
-  },
-  {
     "name": "City Administrator's Office.pdf",
     "office": "(CADO)",
     "link": "/pdfs/City Administrator's Office.pdf"
   },
   {
-    "name": "test.pdf",
-    "office": "test",
-    "link": "/pdfs/test.pdf"
+    "name": "City Agriculturist Office.pdf",
+    "office": "(CAGO)",
+    "link": "/pdfs/City Agriculturist Office.pdf"
+  },
+  {
+    "name": "City Assessor's Office.pdf",
+    "office": "(CASO)",
+    "link": "/pdfs/City Assessor's Office.pdf"
+  },
+  {
+    "name": "City Budget Office.pdf",
+    "office": "(CBTO)",
+    "link": "/pdfs/City Budget Office.pdf"
+  },
+  {
+    "name": "City Civil Registrar Office.pdf",
+    "office": "(CCRO)",
+    "link": "/pdfs/City Civil Registrar Office.pdf"
+  },
+  {
+    "name": "City Cooperatives Office.pdf",
+    "office": "(COOP)",
+    "link": "/pdfs/City Cooperatives Office.pdf"
+  },
+  {
+    "name": "City Disaster Risk Reduction Management Office.pdf",
+    "office": "(CDRRMO)",
+    "link": "/pdfs/City Disaster Risk Reduction Management Office.pdf"
+  },
+  {
+    "name": "City Engineer Office.pdf",
+    "office": "(CEO)",
+    "link": "/pdfs/City Engineer Office.pdf"
+  },
+  {
+    "name": "City Environmental and Natural Resources Office.pdf",
+    "office": "(CENRO)",
+    "link": "/pdfs/City Environmental and Natural Resources Office.pdf"
+  },
+  {
+    "name": "City General Services Office.pdf",
+    "office": "(CGSO)",
+    "link": "/pdfs/City General Services Office.pdf"
+  },
+  {
+    "name": "City Health Office.pdf",
+    "office": "(CHO)",
+    "link": "/pdfs/City Health Office.pdf"
+  },
+  {
+    "name": "City Human Resource Management Office.pdf",
+    "office": "(CHRMO)",
+    "link": "/pdfs/City Human Resource Management Office.pdf"
+  },
+  {
+    "name": "City Indigency  Affairs Office.pdf",
+    "office": "(CIAP)",
+    "link": "/pdfs/City Indigency  Affairs Office.pdf"
+  },
+  {
+    "name": "City Information Office.pdf",
+    "office": "(CIO)",
+    "link": "/pdfs/City Information Office.pdf"
+  },
+  {
+    "name": "City Legal Office.pdf",
+    "office": "(CLGO)",
+    "link": "/pdfs/City Legal Office.pdf"
+  },
+  {
+    "name": "City Mayor's Office.pdf",
+    "office": "(CMO)",
+    "link": "/pdfs/City Mayor's Office.pdf"
+  },
+  {
+    "name": "City Mayor's Office - BPLO.pdf",
+    "office": "(BPLO)",
+    "link": "/pdfs/City Mayor's Office - BPLO.pdf"
+  },
+  {
+    "name": "City Mayor's Office - CTMO.pdf",
+    "office": "(CTMO)",
+    "link": "/pdfs/City Mayor's Office - CTMO.pdf"
+  },
+  {
+    "name": "City Mayor's Office - GAD.pdf",
+    "office": "(GAD)",
+    "link": "/pdfs/City Mayor's Office - GAD.pdf"
+  },
+  {
+    "name": "City Mayor's Office - LEDIPO.pdf",
+    "office": "(LEDIPO)",
+    "link": "/pdfs/City Mayor's Office - LEDIPO.pdf"
+  },
+  {
+    "name": "City Mayor's Office - MIS.pdf",
+    "office": "(MIS)",
+    "link": "/pdfs/City Mayor's Office - MIS.pdf"
+  },
+  {
+    "name": "City Mayor's Office - OSCA.pdf",
+    "office": "(OSCA)",
+    "link": "/pdfs/City Mayor's Office - OSCA.pdf"
+  },
+  {
+    "name": "City Mayor's Office - PDAO.pdf",
+    "office": "(PDAO)",
+    "link": "/pdfs/City Mayor's Office - PDAO.pdf"
+  },
+  {
+    "name": "City Mayor's Office - PESO.pdf",
+    "office": "(PESO)",
+    "link": "/pdfs/City Mayor's Office - PESO.pdf"
+  },
+  {
+    "name": "City Mayor's Office - Records and Administrative Division.pdf",
+    "office": "(Records_Office)",
+    "link": "/pdfs/City Mayor's Office - Records and Administrative Division.pdf"
+  },
+  {
+    "name": "City Mayor's Office - SPORTS.pdf",
+    "office": "(SPORTS)",
+    "link": "/pdfs/City Mayor's Office - SPORTS.pdf"
+  },
+  {
+    "name": "City Mayor's Office - Urban Housing.pdf",
+    "office": "(URBAN_HOUSING)",
+    "link": "/pdfs/City Mayor's Office - Urban Housing.pdf"
+  },
+  {
+    "name": "City Mayor's Office - Zoning and Land Use Division.pdf",
+    "office": "(Zoning)",
+    "link": "/pdfs/City Mayor's Office - Zoning and Land Use Division.pdf"
+  },
+  {
+    "name": "City Planning and Development Office.pdf",
+    "office": "(CPDO)",
+    "link": "/pdfs/City Planning and Development Office.pdf"
+  },
+  {
+    "name": "City Population Office.pdf",
+    "office": "(CPOP)",
+    "link": "/pdfs/City Population Office.pdf"
+  },
+  {
+    "name": "City Prosecutor's Office.pdf",
+    "office": "(CPRO)",
+    "link": "/pdfs/City Prosecutor's Office.pdf"
+  },
+  {
+    "name": "City Social Welfare and Development Office.pdf",
+    "office": "(CSWDO)",
+    "link": "/pdfs/City Social Welfare and Development Office.pdf"
+  },
+  {
+    "name": "City Solid Waste and Management Office.pdf",
+    "office": "(CSWMO)",
+    "link": "/pdfs/City Solid Waste and Management Office.pdf"
+  },
+  {
+    "name": "City Tourism Office.pdf",
+    "office": "(TOURISM)",
+    "link": "/pdfs/City Tourism Office.pdf"
+  },
+  {
+    "name": "City Treasurer's Office.pdf",
+    "office": "(CTO)",
+    "link": "/pdfs/City Treasurer's Office.pdf"
+  },
+  {
+    "name": "City Treasurer's Office - Market.pdf",
+    "office": "(CTO-MARKET)",
+    "link": "/pdfs/City Treasurer's Office - Market.pdf"
+  },
+  {
+    "name": "City Veterinarian's Office - Market.pdf",
+    "office": "(CVET)",
+    "link": "/pdfs/City Veterinarian's Office - Market.pdf"
+  },
+  {
+    "name": "Dalubhasaan ng Lungsod ng San Pablo.pdf",
+    "office": "(DLSP)",
+    "link": "/pdfs/Dalubhasaan ng Lungsod ng San Pablo.pdf"
+  },
+  {
+    "name": "San Pablo City General Hospital.pdf",
+    "office": "(SPCGH)",
+    "link": "/pdfs/San Pablo City General Hospital.pdf"
+  },
+  {
+    "name": "San Pablo City General Hospital - Dialysis.pdf",
+    "office": "(SPCGH - Dialysis)",
+    "link": "/pdfs/San Pablo City General Hospital - Dialysis.pdf"
+  },
+  {
+    "name": "Sangguniang Panlungsod.pdf",
+    "office": "(SPLO)",
+    "link": "/pdfs/Sangguniang Panlungsod.pdf"
+  },
+  {
+    "name": "Sangguniang Panlungsod - City Library.pdf",
+    "office": "(LIBRARY)",
+    "link": "/pdfs/Sangguniang Panlungsod - City Library.pdf"
+  },
+  {
+    "name": "Office of the Building Officials.pdf",
+    "office": "(OBO)",
+    "link": "/pdfs/Office of the Building Officials.pdf"
   }
 ]
