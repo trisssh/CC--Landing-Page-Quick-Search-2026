@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Document, Page, pdfjs } from "react-pdf";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -15,6 +15,9 @@ export default function ViewPdf() {
   const file = decodeURIComponent(queryParams.get("file") || "");
 
   const [numPages, setNumPages] = useState(null);
+  const scrollRef = useRef(null);
+  const [showTop, setShowTop] = useState(false);
+  const [showBottom, setShowBottom] = useState(true);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -35,10 +38,39 @@ export default function ViewPdf() {
     );
   }
 
+//Scroll to-top & down handler
+const handleScroll = () => {
+  const el = scrollRef.current;
+
+  const isTop = el.scrollTop < 100;
+  const isBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 100;
+
+  setShowTop(!isTop);
+  setShowBottom(!isBottom);
+};
+
+//scroll-to-top & down function
+const scrollToTop = () => {
+  scrollRef.current.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+const scrollToBottom = () => {
+  scrollRef.current.scrollTo({
+    top: scrollRef.current.scrollHeight,
+    behavior: "smooth",
+  });
+};
+
   // console.log("PDF PATH:", file);
 
   return (
-    <div className="h-screen overflow-y-auto bg-gray-100 p-4">
+    <div 
+    ref={scrollRef}
+    onScroll={handleScroll}
+    className="h-screen overflow-y-auto bg-gray-100 p-4">
       <header className="relative bg-gradient-to-b from-[#009A68] to-emerald-500 text-white rounded-2xl p-1 shadow-md shadow-emerald-700 mb-3">
         <article className="text-center">
           <h1 className="text-[21px] sm:text-2xl md:text-3xl font-bold font-mono">
@@ -59,6 +91,33 @@ export default function ViewPdf() {
 
       <h1 className="text-center font-bold mb-4">PDF Viewer</h1>
 
+    <div className="fixed bottom-20 right-6 flex flex-col gap-2 z-50">
+   {showTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 bg-emerald-600 hover:bg-emerald-700 text-white p-3 rounded-full shadow-lg transition active:scale-95"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+
+        </button>
+      )}
+
+        {showBottom && (
+    <button
+      onClick={scrollToBottom}
+      className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition active:scale-95"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+
+
+    </button>
+  )}
+      </div>
+   
       <Document
         file={file}
         onLoadSuccess={onDocumentLoadSuccess}
